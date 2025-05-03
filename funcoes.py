@@ -9,8 +9,9 @@ def rolar_dados(n):
     return lista
 
 def guardar_dado(dados_rolados,dados_guardados,dado_para_guardar):
-    for i in range (len(dados_rolados)):
-        if dado_para_guardar==dados_rolados[i]:
-            dados_guardados.append(dado_para_guardar)
-    return dados_guardados
-
+    dados_guardados.append(dados_rolados[dado_para_guardar])
+    del dados_rolados[dado_para_guardar]
+    resultado=[]
+    resultado.append(dados_rolados)
+    resultado.append(dados_guardados)
+    return resultado
