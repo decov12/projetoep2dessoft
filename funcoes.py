@@ -44,5 +44,11 @@ def calcula_pontos_sequencia_baixa(dados_rolados):
         if dado in dados_rolados and dado+1 in dados_rolados and dado+2 in dados_rolados and dado+3 in dados_rolados:
             return 15
     return 0
+
+def calcula_pontos_sequencia_alta(dados_rolados):
+    for dado in dados_rolados:
+        if dado in dados_rolados and dado+1 in dados_rolados and dado+2 in dados_rolados and dado+3 in dados_rolados and dado+4 in dados_rolados:
+            return 30
+    return 0
         
        
