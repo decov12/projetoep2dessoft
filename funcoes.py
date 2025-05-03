@@ -23,3 +23,13 @@ def remover_dado(dados_rolados,dados_no_estoque,dado_para_remover):
     resultado.append(dados_rolados)
     resultado.append(dados_no_estoque)
     return resultado
+
+def calcula_pontos_regra_simples(dados_rolados):
+    dicio = {1:0, 2:0, 3:0, 4:0, 5:0, 6:0}
+    
+    for dado in dados_rolados:
+        if dado in dicio:
+            dicio[dado] += dado
+
+    return dicio
+       
