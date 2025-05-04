@@ -112,6 +112,16 @@ def calcula_pontos_quina(dados_rolados):
         return 50
     else:
         return 0
+    
+def calcula_pontos_regra_avancada(dados_rolados):
+    dicio={}
+    dicio['cinco_iguais']=calcula_pontos_quina(dados_rolados)
+    dicio['full_house']=calcula_pontos_full_house(dados_rolados)
+    dicio['quadra']=calcula_pontos_quadra(dados_rolados)
+    dicio['sem_combinacao']=calcula_pontos_soma(dados_rolados)
+    dicio['sequencia_alta']=calcula_pontos_sequencia_alta(dados_rolados)
+    dicio['sequencia_baixa']=calcula_pontos_sequencia_baixa(dados_rolados)
+    return dicio
 
 
 
