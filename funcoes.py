@@ -52,21 +52,24 @@ def calcula_pontos_sequencia_alta(dados_rolados):
     return 0
         
 def calcula_pontos_full_house(dados_rolados):
-    i=0
-    while i < len (dados_rolados):
-        j=0
-        contador=0
-        while j < len (dados_rolados):
-            if dados_rolados[j]==dados_rolados[i]:
-                contador+=1
-            j+=1
-            if contador==3:
-                trio=1
-            if contador==2:
-                duo=1
-        i+=1
-    if trio==1 and duo==1:
+    i = 0
+    trio = 0
+    duo = 0
+    while i < len(dados_rolados):
+        j = 0
+        contador = 0
+        while j < len(dados_rolados):
+            if dados_rolados[j] == dados_rolados[i]:
+                contador += 1
+            j += 1
+        if contador == 3:
+            trio = dados_rolados[i]
+        elif contador == 2 and dados_rolados[i] != trio:
+            duo = dados_rolados[i]
+        i += 1
+    if trio != 0 and duo != 0:
         return 19
     else:
         return 0
+
             
