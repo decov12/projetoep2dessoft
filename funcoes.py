@@ -68,7 +68,7 @@ def calcula_pontos_full_house(dados_rolados):
             duo = dados_rolados[i]
         i += 1
     if trio != 0 and duo != 0:
-        return 19
+        return 18
     else:
         return 0
 
