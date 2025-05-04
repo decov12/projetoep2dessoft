@@ -124,12 +124,12 @@ def calcula_pontos_regra_avancada(dados_rolados):
     return dicio
 
 def faz_jogada(dados_rolados, categoria, cartela):
-    if categoria in calcula_pontos_regra_avancada(dados_rolados):
-        resultado = calcula_pontos_regra_avancada(dados_rolados)
-        cartela[categoria] = resultado[categoria]
-    elif categoria in calcula_pontos_regra_simples(dados_rolados):
+    if categoria in cartela["regra_simples"]:
         resultado = calcula_pontos_regra_simples(dados_rolados)
-        cartela[categoria] = resultado[categoria]
+        cartela["regra_simples"][categoria] = resultado[categoria]
+    elif categoria in cartela["regra_avancada"]:
+        resultado = calcula_pontos_regra_avancada(dados_rolados)
+        cartela["regra_avancada"][categoria] = resultado[categoria]
     return cartela
 
 
