@@ -55,6 +55,7 @@ def calcula_pontos_full_house(dados_rolados):
     i = 0
     trio = 0
     duo = 0
+    soma=0
     while i < len(dados_rolados):
         j = 0
         contador = 0
@@ -66,9 +67,11 @@ def calcula_pontos_full_house(dados_rolados):
             trio = dados_rolados[i]
         elif contador == 2 and dados_rolados[i] != trio:
             duo = dados_rolados[i]
+        soma+=dados_rolados[i]
         i += 1
+    
     if trio != 0 and duo != 0:
-        return 18
+        return soma
     else:
         return 0
 
