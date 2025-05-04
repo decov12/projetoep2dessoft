@@ -86,7 +86,7 @@ def calcula_pontos_quadra(dados_rolados):
             if dados_rolados[i]==dados_rolados[j]:
                 contador+=1
             j+=1
-        if contador==4:
+        if contador>3:
             quadra=1
         soma+=dados_rolados[i]
         i+=1
