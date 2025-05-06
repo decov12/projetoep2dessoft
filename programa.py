@@ -28,7 +28,7 @@ while rodadas < 12:
         if opcao == '1':
             print("Digite o índice do dado a ser guardado (0 a 4):")
             entrada = input()
-            if entrada.isdigit():
+            if entrada==int or entrada==float:
                 idx = int(entrada)
                 if 0 <= idx < len(dados_rolados):
                     resultado = guardar_dado(dados_rolados, dados_guardados, idx)
