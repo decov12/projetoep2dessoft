@@ -88,7 +88,6 @@ while rodadas < 12:
 
     rodadas += 1
 
-print("\nFim do jogo! Cartela final:")
 imprime_cartela(cartela)
 
 
